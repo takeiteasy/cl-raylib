@@ -1,3 +1,25 @@
+;; MIT License
+
+;; Copyright (c) longlene 2017
+
+;; Permission is hereby granted, free of charge, to any person obtaining a copy
+;; of this software and associated documentation files (the "Software"), to deal
+;; in the Software without restriction, including without limitation the rights
+;; to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+;; copies of the Software, and to permit persons to whom the Software is
+;; furnished to do so, subject to the following conditions:
+
+;; The above copyright notice and this permission notice shall be included in all
+;; copies or substantial portions of the Software.
+
+;; THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+;; IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+;; FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+;; AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+;; LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+;; SOFTWARE.
+
 (in-package #:cl-raylib)
 ;;/**********************************************************************************************
 ;;*
@@ -2531,7 +2553,7 @@
 ;;RLAPI Vector2 GetScreenToWorld2D(Vector2 position, Camera2D camera); // Get the world space position for a 2d camera screen space position
 (defcfun "GetScreenToWorld2D" (:struct %vector2)
   (position (:struct %vector2))
-  (camera (:struct %camera2d))) 
+  (camera (:struct %camera2d)))
 
 ;;RLAPI Vector2 GetWorldToScreenEx(Vector3 position, Camera camera, int width, int height); // Get size position for a 3d world space position
 (defcfun "GetWorldToScreenEx" (:struct %vector2)
@@ -3735,7 +3757,7 @@
   (height :int)
   (density :float)
   (inner (:struct %color))
-  (outer (:struct %color)))         
+  (outer (:struct %color)))
 
 ;;RLAPI Image GenImageGradientSquare(int width, int height, float density, Color inner, Color outer);      // Generate image: square gradient
 (defcfun "GenImageGradientSquare" (:struct %image)
@@ -3744,7 +3766,7 @@
   (height :int)
   (density :float)
   (inner (:struct %color))
-  (outer (:struct %color)))         
+  (outer (:struct %color)))
 
 ;;RLAPI Image GenImageChecked(int width, int height, int checksX, int checksY, Color col1, Color col2);    // Generate image: checked
 (defcfun "GenImageChecked" (:struct %image)
@@ -5125,7 +5147,7 @@
 ;;RLAPI void UnloadModelAnimations(ModelAnimation *animations, int animCount);                // Unload animation array data
 (defcfun "UnloadModelAnimations" :void
   (animations (:pointer (:struct %model-animation)))
-  (anim-count :int)) 
+  (anim-count :int))
 
 ;;RLAPI bool IsModelAnimationValid(Model model, ModelAnimation anim);                         // Check model animation skeleton match
 (defcfun "IsModelAnimationValid" :bool
