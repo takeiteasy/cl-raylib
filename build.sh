@@ -16,3 +16,17 @@ fi
 
 # clean up
 rm *.o
+
+cd ../../
+
+EXTRA_CFLAGS=
+LIBRARY_EXT=
+if [[ "$OSTYPE" =~ "darwin" ]]; then
+    EXTRA_CFLAGS="-framework OpenGL"
+    LIBRARY_EXT="dylib"
+else
+    EXTRA_CFLAGS="-lrt -lGL -lX11"
+    LIBRARY_EXT="so"
+fi
+
+gcc -shared -fpic -Iraylib/src -Iraygui/src -DRAYGUI_IMPLEMENTATION $EXTRA_CFLAGS -Lbuild -lraylib -lm -lpthread -ldl -o build/libraygui.$LIBRARY_EXT

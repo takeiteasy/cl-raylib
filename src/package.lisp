@@ -650,7 +650,7 @@
    #:+texture-wrap-t+
    #:+texture-map-filter+
    #:+texture-min-filter+
-   
+
    #:+texture-filter-nearest+
    #:+texture-filter-linear+
    #:+texture-filter-mip-nearest+
@@ -792,30 +792,30 @@
    #:set-blend-mode
    #:set-blend-factors
    #:set-blend-factors-separate
-   
+
    #:rlgl-init
    #:rlgl-close
    #:load-extensions
    #:get-version
-   
+
    #:set-framebuffer-width
    #:get-framebuffer-width
    #:set-framebuffer-height
    #:get-framebuffer-height
-   
+
    #:get-texture-id-default
    #:get-shader-id-default
    #:get-shader-locs-default
-   
+
    #:load-render-batch
    #:unload-render-batch
    #:draw-render-batch
    #:set-render-batch-active
    #:draw-render-batch-active
    #:check-render-batch-limit
-   
+
    #:set-texture
-   
+
    #:load-vertex-array
    #:load-vertex-buffer
    #:load-vertext-buffer-element
@@ -830,7 +830,7 @@
    #:draw-vertex-array-elements
    #:draw-vertex-array-instanced
    #:draw-vertex-array-elements-instanced
-   
+
    #:load-texture
    #:load-texture-depth
    #:load-texture-cubemap
@@ -841,12 +841,12 @@
    #:gen-texture-mipmaps
    #:read-texture-pixels
    #:read-screen-pixels
-   
+
    #:load-framebuffer
    #:framebuffer-attach
    #:framebuffer-complete
    #:unload-framebuffer
-   
+
    #:load-shader-code
    #:compile-shader
    #:load-shader-program
@@ -867,7 +867,7 @@
    #:copy-shader-buffers
    #:get-shader-buffer-size
    #:bind-image-texture
-   
+
    #:get-matrix-modelview
    #:get-matrix-projection
    #:get-matrix-transform
@@ -879,3 +879,7 @@
    #:set-matrix-view-offset-stereo
    #:load-draw-cube
    #:load-draw-quad))
+
+(defpackage #:cl-raygui
+  (:nicknames #:raygui)
+  (:use #:cl #:cffi #:alexandria #:cl-raylib #:cl-raylib-util)))

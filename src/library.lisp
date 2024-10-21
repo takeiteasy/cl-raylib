@@ -12,3 +12,12 @@
 
 (unless (foreign-library-loaded-p 'libraylib)
   (use-foreign-library libraylib))
+
+(define-foreign-library libraygui
+  (:darwin "libraygui.dylib")
+  (:unix "libraygui.so")
+  (:windows (:or "raygui.dll" "libraygui.dll"))
+  (t (:default "libraygui")))
+
+(unless (foreign-library-loaded-p 'libraygui)
+  (use-foreign-library libraygui))
