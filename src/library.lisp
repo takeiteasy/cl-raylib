@@ -13,6 +13,8 @@
 (unless (foreign-library-loaded-p 'libraylib)
   (use-foreign-library libraylib))
 
+(in-package #:cl-raygui)
+
 (define-foreign-library libraygui
   (:darwin "libraygui.dylib")
   (:unix "libraygui.so")
