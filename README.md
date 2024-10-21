@@ -6,7 +6,7 @@ Common Lisp binding of [raylib](https://www.raylib.com/)
 
 cl-raylib require raylib dynamic library
 
-run `brew install raylib` to install the library if run example on macOS
+run `brew install raylib` to install the library if run example on macOS, or run `build.sh` on posix systems and `build.bat` on windows to build from source.
 
 2. install `cffi`
 
