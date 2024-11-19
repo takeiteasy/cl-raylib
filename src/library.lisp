@@ -1,6 +1,6 @@
 (in-package #:cl-raylib)
 
-(pushnew (asdf:system-relative-pathname :elk #p"build/")
+(pushnew (asdf:system-relative-pathname :cl-raylib #p"build/")
          cffi:*foreign-library-directories*
          :test #'equal)
 
