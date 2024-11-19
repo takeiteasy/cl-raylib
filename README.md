@@ -8,6 +8,8 @@ cl-raylib require raylib dynamic library
 
 run `brew install raylib` to install the library if run example on macOS
 
+or run `build.sh` or `build.bat` to build raylib locally
+
 2. install `cffi`
 
 cl-raylib use cffi to load dynamic library
