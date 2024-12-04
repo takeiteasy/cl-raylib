@@ -11,7 +11,7 @@ make PLATFORM=PLATFORM_DESKTOP RAYLIB_LIBTYPE=SHARED
 
 # copy the dynamic libraries
 if [[ "$OSTYPE" =~ "darwin" ]]; then
-    mv *.dylib ../../../build
+    mv *.dylib ../../build
 else
     mv *.so ../../build
 fi
